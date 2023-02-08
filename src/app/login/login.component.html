@@ -1,0 +1,61 @@
+<div class="card">
+  <h4 class="card-header">Login</h4>
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+  <div class="card-body">
+    <form [formGroup]="profileForm">
+      <!-- <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div> -->
+      <div class="mb-3" >
+        Email :<input type="email" class="form-control" formControlName="email" [(ngModel)]="foundUser.email" id="email" 
+          placeholder="Your Email" [ngClass]="{ 'is-invalid': profileForm.touched && f['email'].errors }">
+        <div *ngIf="profileForm.touched && f['email'].errors" class="invalid-feedback">
+          <div *ngIf="f['email'].errors['required']">Email is required</div>
+          <div *ngIf="f['email'].errors['email']">Invalid Email Format</div>
+
+        </div>
+        
+        <div class="mb-3">
+
+          Password :<input type="password" name="password" class="form-control" formControlName="password"
+            [(ngModel)]="foundUser.password" id="password" placeholder="Your Password"
+            [ngClass]="{ 'is-invalid': f['password'].touched && f['password'].errors }">
+
+          <div *ngIf="f['password'].touched && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Password is required</div>
+
+           
+
+        </div>
+        <br>
+        <div class="mb-3">
+          <button (click)=handleLogin() class="btn btn-success" type="submit" 
+            [disabled]="!profileForm.valid">Login</button>&nbsp;&nbsp;
+          <button (click)=registerButton() class="btn btn-success">New User?</button>
+
+        </div>
+  </div>
+  <!-- <button (click)=handleJWTAuthLogin() class="btn btn-success">Login</button> -->
+
+  <!-- </div> -->
+
+
+
+  <!-- <div class="container">
+    
+    <div>
+        <div class="form-outline mb-4">
+            <input type="text" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Username"  [(ngModel)]="foundUser.email" />
+            <label class="form-label" for="form3Example3">Email address</label>
+
+          </div>
+         Password input -->
+  <!-- <div class="form-outline mb-3">
+            <input [(ngModel)]="foundUser.password" type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+        <div>
+            <button (click)=handleLogin() class ="btn btn-success">Login</button> &nbsp;&nbsp;&nbsp; -->
+  <!-- <button (click)=registerButton() class="btn btn-success">Register</button> -->
+
+  <!-- </div> -->

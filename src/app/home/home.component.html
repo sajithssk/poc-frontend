@@ -1,0 +1,175 @@
+
+<div class="container" >
+    <H2>Hai {{message}}.  Welcome to the Home Page</H2>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+    
+        body {
+          margin: 0;
+          box-sizing: border-box;
+        }
+           
+    
+        /* CSS for main element */
+        .intro {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 520px;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("data:image/jpeg;base64,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");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+    
+        .intro h1 {
+          font-family: sans-serif;
+          font-size: 60px;
+          color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin: 0;
+        }
+    
+        .intro p {
+          font-size: 20px;
+          color: #d1d1d1;
+          text-transform: uppercase;
+          margin: 20px 0;
+        }
+    
+        
+    
+        .achievements {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 40px 80px;
+        }
+    
+        .achievements .work {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 40px;
+        }
+    
+        .achievements .work i {
+          width: fit-content;
+          font-size: 50px;
+          color: #333333;
+          border-radius: 50%;
+          border: 2px solid #333333;
+          padding: 12px;
+        }
+    
+        .achievements .work .work-heading {
+          font-size: 20px;
+          color: #333333;
+          text-transform: uppercase;
+          margin: 10px 0;
+        }
+    
+        .achievements .work .work-text {
+          font-size: 15px;
+          color: #585858;
+          margin: 10px 0;
+        }
+    
+        .about-me {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 80px;
+          border-top: 2px solid #eeeeee;
+        }
+    
+        .about-me img {
+          width: 500px;
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+    
+        .about-me-text h2 {
+          font-size: 30px;
+          color: #333333;
+          text-transform: uppercase;
+          margin: 0;
+        }
+    
+        .about-me-text p {
+          font-size: 15px;
+          color: #585858;
+          margin: 10px 0;
+        }
+    
+        /* CSS for footer */
+        .footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #302f49;
+          padding: 40px 80px;
+        }
+    
+        .footer .copy {
+          color: #fff;
+        }
+    
+        .bottom-links {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 40px 0;
+        }
+    
+        .bottom-links .links {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 40px;
+        }
+    
+        .bottom-links .links span {
+          font-size: 20px;
+          color: #fff;
+          text-transform: uppercase;
+          margin: 10px 0;
+        }
+    
+        .bottom-links .links a {
+          text-decoration: none;
+          color: #a1a1a1;
+          padding: 10px 20px;
+        }
+      </style>
+    </head>   
+    <body>
+      <main>
+        <div class="intro">
+          <h1>Welcome to SDC Planner</h1>
+          <p>Have a Nice Day!!!</p>
+          
+        </div>
+        <div class="achievements">
+          
+          <!-- <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me"> -->
+        </div>
+      </main>
+      
+    </body>
+    
+    </html>
+
+
